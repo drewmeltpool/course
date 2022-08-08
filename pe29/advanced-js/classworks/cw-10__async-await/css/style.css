@@ -1,0 +1,92 @@
+:root {
+  --primary: #3d3d3d;
+  --grey: #7a7a7a
+}
+
+* {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.login {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3em;
+  background-color: var(--primary);
+}
+
+.login__field {
+  border: none;
+  outline: none;
+  margin-bottom: 1em;
+  padding: 1em 2em;
+}
+
+.login__btn {
+  border: none;
+  outline: none;
+  background-color: var(--grey);
+  color: white;
+  text-transform: uppercase;
+  padding: 1em 2em;
+}
+
+.albums {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+}
+
+.album {
+  padding: 2em;
+  background-color: var(--grey);
+}
+
+.album__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1em;
+}
+
+.album__author {
+  font-size: 18px;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 20em;
+  grid-gap: 2em;
+}
+
+.album-photo {
+  position: relative;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-photo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.album-photo__title {
+  padding: 1em 2em;
+  background-color: var(--grey);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

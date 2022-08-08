@@ -1,0 +1,63 @@
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+.container {
+	max-width: 1650px;
+	margin: 0 auto;
+}
+
+.hero {
+	background-image: url(../img/hero-bg.jpg);
+}
+
+.hero-description {
+	width: 775px;
+	padding: 261px 0 132px;
+}
+
+.hero-heading {
+	text-transform: uppercase;
+	font-size: 110px;
+	line-height: 120px;
+	color: transparent;
+	background: linear-gradient(93.75deg, rgba(63, 137, 182, 0.55) 12%, rgba(255, 255, 255, 0.369531) 30%, rgba(115, 70, 126, 0.55) 70%);
+	-webkit-background-clip: text;
+	/*text-shadow: 0 0 0 #f0f;*/
+}
+
+.hero-text {
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0.06em;
+	color: #E7E7E7;
+	margin-top: 29px;
+	margin-bottom: 29px;
+}
+
+.hero-btn {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 10px;
+	border: none;
+	padding: 16px 30px;
+	color: #fff;
+}
+
+.hero-btn::after {
+	padding-left: 13px;
+	content: url(../img/right-arrow.svg)
+}
+
+.btn-purple {
+	background: linear-gradient(92.73deg, #475486 0%, #5B2F71 100%);
+}

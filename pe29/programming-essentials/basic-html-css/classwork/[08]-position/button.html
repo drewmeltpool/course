@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*div {*/
+        /*    border-radius: 3px;*/
+        /*    color: white;*/
+        /*    text-transform: uppercase;*/
+        /*    display: inline-block;*/
+        /*    background: gray;*/
+        /*    position: relative;*/
+        /*    padding-left: 20px;*/
+        /*    padding-top: 10px;*/
+        /*    padding-bottom: 10px;*/
+        /*    padding-right: 5px;*/
+        /*    box-sizing: border-box;*/
+        /*}*/
+
+        img {
+            transform: translateY(-50%);
+            left: 0;
+            top: 50%;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        img:hover ~ ul {
+            z-index: 1;
+            opacity: 1;
+        }
+
+        ul {
+            z-index: -1;
+            opacity: 0;
+            position: absolute;
+            background: green;
+            top: 50%;
+            padding: 10px;
+            margin: 0;
+            left: 0;
+            color: black;
+            list-style-type: none;
+            transition: 0.3s ease;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .items-list {
+            background: lightskyblue;
+            padding: 0 5px;
+        }
+
+        .item {
+            border: 2px solid black;
+            background: gray;
+            color: white;
+            box-sizing: border-box;
+            padding: 2px 5px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        @media all and (min-width: 624px) {
+            .items-list {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .item {
+                width: 50%;
+            }
+        }
+
+        @media all and (min-width: 900px) {
+            .items-list {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .item {
+                width: 33%;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--    <div class="button">-->
+<!--        <img class="button__icon" src="./facebook.svg" alt="">-->
+<!--        <span class="button&#45;&#45;title">button</span>-->
+<!--        <ul>-->
+<!--            <li>item1</li>-->
+<!--            <li>item2</li>-->
+<!--            <li>item3</li>-->
+<!--            <li>item4</li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="items-list">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+        <div class="item">item9</div>
+        <div class="item">item10</div>
+        <div class="item">item11</div>
+        <div class="item">item12</div>
+    </div>
+</body>
+</html>

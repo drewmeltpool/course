@@ -1,0 +1,11 @@
+@import "variables";
+@import "mixins";
+@import "about";
+@import "hero";
+
+.container {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+@import "blocks/all-blocks";

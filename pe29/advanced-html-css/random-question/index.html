@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Randomiser</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 80%;
+      height: 300px;
+      font-size: 70px;
+      color: black;
+      background-color: #fffa82;
+      box-shadow: 3px 3px 30px #7b7b7b;
+    }
+
+    .button-random {
+      border: none;
+      padding: 10px 30px;
+      margin-top: 20px;
+      background-color: #72ff82;
+      outline: none;
+      font-size: 20px;
+      box-shadow: 2px 2px 30px #7b7b7b;
+      border-radius: 10px;
+    }
+
+    .button-random + #reset {
+      background-color: #fffa82;
+    }
+  </style>
+</head>
+<body>
+<div class='container'>
+  <div class='name'>
+    <span id='result'>Welcome to Randomiser.</span>
+  </div>
+  <div>
+    <button id='random' class='button-random' type='button'>Get random student</button>
+    <button id='reset' class='button-random' type='button'>Reset</button>
+  </div>
+</div>
+
+<!--<audio id="gogi" controls src="Sound_06308.mp3">-->
+
+<script>
+  // Module
+  function randomQuestion() {
+    let allQuestions = JSON.parse(localStorage.getItem('students')) || [
+      "что такое npm?",
+      // "Node JS это фреймворк?",
+      "где размещается папка node_modules?",
+      "когда появляется папка node_modules?",
+      // "можно ли самому удалять папку node_modules и/или ее содержимое?",
+      // "зачем нужен package.json?",
+      // "можно ли создавать и заполнять package.json самостоятельно?",
+      "какая команда отвечает за создание package.json?",
+      "что такое gulp?",
+      "какой метод gulp отвечает за создание задачи?",
+      "какой метод gulp отвечает за то чтобы отобрать файлы в проекте для изменений?",
+      "какой метод gulp отвечает за то чтобы разместить файлы?",
+      "какой метод gulp отвечает за последовательное выполнение нескольких функций?",
+      "какой метод gulp отвечает за параллельное выполнение нескольких функций?",
+      "где взять сведения про то как подключать какой-то модуль?",
+      // "как выбирать модули для сборки?",
+      // "что такое препроцессоры?",
+      "зачем нам sass/scss?",
+      "в чем разница между sass и scss?",
+      // "что такое миксины в scss? как ими пользоваться?",
+      // "что такое наследование в scss? как им пользоваться?",
+      "что такое БЭМ и зачем он нам нужен?",
+      "можно ли вкладывать Блок в Блок?",
+      "можно ли вкладывать Элемент блока в Элемент блока?",
+      "как определить что что-то на странице является БЭМовским блоком?",
+      // "нужно ли соблюдать блочную структуру и в фаловой системе тоже?",
+      'что называется резиновой версткой?',
+      'что называется адаптивной версткой?',
+      'как посмотреть вид сайта на устройствах с разным разрешением во время разработки?',
+      'сколько должно быть медиазапросов?',
+      'что такое медиазапросы?',
+      'как написать медиазапрос для разрешений 768 - 480 пикселей?',
+      'назовите варианты размещения медиазапросов в коде',
+    ];
+    let wasSelected = JSON.parse(localStorage.getItem('wasSelected')) || [];
+    let result;
+
+    if (allQuestions.length > 0) {
+      wasSelected.push(
+        allQuestions.splice(
+          Math.floor(Math.random() * allQuestions.length),
+          1
+        )[0]
+      );
+      result = wasSelected[wasSelected.length - 1];
+    } else {
+      allQuestions = wasSelected.sort(el => Math.random() - 0.5);
+      wasSelected = [];
+      result = 'Randomiser is reloading...Press button one more time.';
+    }
+
+    localStorage.setItem('wasSelected', JSON.stringify(wasSelected));
+    localStorage.setItem('students', JSON.stringify(allQuestions));
+
+    return result;
+  }
+
+  // Get elements
+  const text = document.getElementById('result');
+  const button = document.getElementById('random');
+  const reset = document.getElementById('reset');
+  const audio = new Audio('Sound_06308.mp3');
+
+  // Add listeners
+  button.addEventListener('click', () => {
+    const selectedStudent = randomQuestion();
+    audio.play();
+    audio.onended = () => {
+      text.textContent = selectedStudent;
+    }
+  });
+  reset.addEventListener('click', () => {
+    localStorage.clear();
+    text.innerText = 'Welcome to Randomiser.';
+  });
+</script>
+</body>
+</html>

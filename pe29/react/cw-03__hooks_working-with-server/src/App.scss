@@ -1,0 +1,11 @@
+.container {
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.email-client {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-content: space-between;
+}

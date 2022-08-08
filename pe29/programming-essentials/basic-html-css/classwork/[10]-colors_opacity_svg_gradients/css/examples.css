@@ -1,0 +1,54 @@
+.blog-post {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	padding: 20px;
+	background-color: powderblue;
+	border-radius: 5px;
+}
+
+.blog-post-title {
+	font-size: 36px;
+	line-height: 1.25;
+}
+
+.blog-post-text {
+	color: #333;
+}
+
+.btn {
+	border: none;
+	outline: none;
+	
+	background-color: #ff4561;
+	color: #fff;
+	border-radius: 3px;
+}
+
+.diploma-wrapper {
+	width: 50px;
+	height: 50px;
+	fill: #3d3d3d;
+	background-color: palegreen;
+}
+
+.diploma-line {
+	fill: #0f0;
+}
+
+.diploma-wrapper:hover .diploma-line{
+	fill: #ff4561;
+}
+
+.company:hover .company-img {
+	content: url('path_to_new_img');
+}
+
+.company:hover .company-text {
+	color: #FF9933;
+}
+
+
+
+

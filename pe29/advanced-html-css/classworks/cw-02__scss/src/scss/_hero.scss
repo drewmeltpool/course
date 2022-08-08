@@ -1,0 +1,5 @@
+.hero {
+	padding: 90px 0;
+	background-color: $darkBlack;
+	@include gogiFlex(center, space-between);
+}

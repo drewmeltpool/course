@@ -1,0 +1,8 @@
+@mixin gogiFlex ($align, $justify, $isWrapped:false) {
+  display: flex;
+  @if $isWrapped {
+    flex-wrap: wrap;
+  }
+  align-items: $align;
+  justify-content: $justify;
+}

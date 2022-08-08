@@ -1,0 +1,39 @@
+.main-block {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.section-products {
+    background: grey;
+    display: flex;
+    margin: 0 -10px;
+    flex-wrap: wrap;
+}
+
+.section-product__wrapper {
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 33.33%;
+}
+
+.section-product {
+    background: white;
+    border: 1px solid;
+    min-height: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.section-product__image {
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+}
+
+.section-product__header {
+    margin: 0;
+}

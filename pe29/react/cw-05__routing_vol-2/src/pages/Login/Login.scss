@@ -1,0 +1,23 @@
+.login {
+  &-wrap {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__form {
+    width: 40%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 5px 0 #2c2c2c;
+    background-color: #c2c2c2;
+
+    & input {
+      padding: 10px 25px;
+      border: none
+    }
+  }
+}

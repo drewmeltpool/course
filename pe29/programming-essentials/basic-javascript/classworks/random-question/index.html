@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Randomiser</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 80%;
+      height: 300px;
+      font-size: 70px;
+      color: black;
+      background-color: #fffa82;
+      box-shadow: 3px 3px 30px #7b7b7b;
+    }
+
+    .button-random {
+      border: none;
+      padding: 10px 30px;
+      margin-top: 20px;
+      background-color: #72ff82;
+      outline: none;
+      font-size: 20px;
+      box-shadow: 2px 2px 30px #7b7b7b;
+      border-radius: 10px;
+    }
+
+    .button-random + #reset {
+      background-color: #fffa82;
+    }
+  </style>
+</head>
+<body>
+<div class='container'>
+  <div class='name'>
+    <span id='result'>Welcome to Randomiser.</span>
+  </div>
+  <div>
+    <button id='random' class='button-random' type='button'>Get random student</button>
+    <button id='reset' class='button-random' type='button'>Reset</button>
+  </div>
+</div>
+
+<!--<audio id="gogi" controls src="Sound_06308.mp3">-->
+
+<script>
+  // Module
+  function randomStudent() {
+    let allStudents = JSON.parse(localStorage.getItem('questions')) || [
+      // 'чем отличается ссылочный тип данных от примитивных?',
+      // 'можно ли в JS сравнивать дваразных типа данных? если да, то как это происходит?',
+      // 'что такое объект?',
+      // 'что такое функция?',
+      // 'какие циклы Вы знаете?',
+      // 'в чем разница между объявлением переменной var, let, const?',
+      // 'как вы понимаете словосочетание "контекст выполнения"?',
+      // 'для чего функции нужны аргументы?',
+      // 'сколько аргументов можно задать функции?',
+      // 'сколько раз можно написать return внутри функции?',
+      // 'сколько свойств можно задать объекту?',
+      // 'какие типы данных можно хранить в качестве значения свойства в объекте?',
+      // 'какие вы знаете способы получить значение свойства?',
+      // 'в чем разница между объявлением функции, ее вызовом и обращением к ней?',
+      // 'объясните разницу между возвращаемым значением функции и результатом ее выполнения',
+      // 'что такое геттеры и сеттеры? в чем их особенность в джаваскрипте?',
+      // 'для чего нужны методы объекта?',
+      // 'что такое строка?',
+      // 'есть ли разница какие кавычки использовать при создании строки?',
+      // 'сколько способов создания строки вы знаете?',
+      // 'что такое шаблонная строка?',
+      // 'для чего нужны спецсимволы?',
+      // 'какие спецсимволы вы знаете?',
+      // 'как узнать длинну строки?',
+      // 'как получить доступ к конкретному символу строки?',
+      // 'что значит фраза - строка неизменяема?',
+      // 'есть ли метод строки, который приведет в верхний регистр первую букву каждого слова?',
+      // 'какими методами строки можно воспользоваться, чтобы вырезать часть исходной строки?',
+      // 'как происходит сравнение строк?',
+      // 'как убрать пробелы в начале и в конце строки?',
+      // 'зачем в JavaScript нужен объект Date?',
+      // 'что мы можем переедать в качестве аргумента при создании объекта Date?',
+      // 'как получить день недели? в каком формате мы его получим?',
+      // 'как увеличить дату на два дня? будет ли этот способ работать и для уменьшения?',
+      // 'что вернет Date.now()?',
+      // 'есть ли в JS-е нулевой месяц?',
+      // 'что такое стрелочная фнукция?',
+      // 'в чем разница между обычной функцией и стрелочной?',
+      // 'что будет записано в this, внутри стрелочной функции?',
+      // 'сколько видов записи стрелочной функции вы знаете? перечислите их',
+      // 'как присвоить аргументу функции значение по умолчанию?',
+      // 'в каком случае в качестве аргумента у функции будет значение по умолачнию?',
+      // 'что такое массив?',
+      // 'что такое callback функция?',
+      // 'какой метод массива отвечает за перебор всех его элементов, но не возвращает новый массив?',
+      'опишите как рабоатет метод массива map',
+      'опишите как работае метод массива filter',
+      // 'в чем разница между методами массива some и find?',
+      // 'что значит фраза "метод forEach не изменяет исходный массив"?',
+      // 'можно ли добавить элемент массива в начало?',
+      'что делает метод массива pop?',
+      'в чем разница между методами массива slice и splice?',
+      // 'есть ли в массиве методы, при помощи которого мы можем указать свой принцип сортировки элементов?',
+      // 'как найти индекс элемента в массиве?',
+      // 'как узнать проходят ли проверку все элементы массива и полчить boolean ответ?',
+      // 'что такое DOM?',
+      // 'какие есть способы получить элемент со страницы?',
+      // 'какие свойства отвечают за текст внутри элемента?',
+      // 'назовите способы изменить ДОМ элементу стили',
+      // 'что такое CSSOM?',
+      // 'что возвращает метод getElementsByClassName?',
+      // 'что возвращает метод querySelector?',
+      'в чем разница между HTMLCollection и NodeList?',
+      // 'в каких случаях не стоит использовать innerHTML?',
+      'в чем разница между свойствами ДОМ элемента - children и childNodes?',
+      'как найти родительский элемент?',
+      'есть ли у ДОМ элемента метод closest?',
+      // 'что можно назвать браузерным событием?',
+      'какие вы знаете типы браузерных событий?',
+      'как выполнить часть кода, по нажатию на элемент?',
+      // 'как выполнить часть кода, по наведению курсора мыши на элемент?',
+      // "в чем разница между методом addEventListener и свойством onclick?",
+      "addEventListener принимает вторым аргументов функцию. что будет ей передано первым аргументом?",
+      "как получить координаты нахождения курсора после клика по элементу?",
+      "как отследить нажатие клавиши на клавиатуре?",
+      // "в чем разница между load и unload событиями? кому они принадлежат?",
+      // "для чего может быть полезно событие beforeunload?",
+      "опишите разницу между keydown и keyup?",
+      "опишите разницу между event.code и event.key?",
+      "нормально ли, когда возникает много событий keydown, после которых только один keyup? почему?",
+      "можно ли в джаваскрипте выполнить часть кода с какой-то задержкой?",
+      "опишите разницу между setTimeout и setInterval?",
+      "что возвращает setTimeout и setInterval?",
+      "как отменить вызов функции с задержкой?",
+      "что такое localStorage?",
+      "чем localStorage отличается от sessionStorage?",
+      "могу ли я записать в localStorage объект?",
+      "для чего используется localStorage?",
+      "что такое eventLoop и при чем тут?",
+      "какова минимальная задержка в браузере?",
+      "что будет если задать задержку длинной в 0 миллисекунд?",
+      "?",
+    ];
+    let wasSelected = JSON.parse(localStorage.getItem('selectedQuestions')) || [];
+    let result;
+
+    if (allStudents.length > 0) {
+      wasSelected.push(
+        allStudents.splice(
+          Math.floor(Math.random() * allStudents.length),
+          1
+        )[0]
+      );
+      result = wasSelected[wasSelected.length - 1];
+    } else {
+      allStudents = wasSelected.sort(el => Math.random() - 0.5);
+      wasSelected = [];
+      result = 'Randomiser is reloading...Press button one more time.';
+    }
+
+    localStorage.setItem('selectedQuestions', JSON.stringify(wasSelected));
+    localStorage.setItem('questions', JSON.stringify(allStudents));
+
+    return result;
+  }
+
+  // Get elements
+  const text = document.getElementById('result');
+  const button = document.getElementById('random');
+  const reset = document.getElementById('reset');
+  const audio = new Audio('Sound_06308.mp3');
+
+  // Add listeners
+  button.addEventListener('click', () => {
+    const selectedStudent = randomStudent();
+    audio.play();
+    audio.onended = () => {
+      text.textContent = selectedStudent;
+    }
+  });
+  reset.addEventListener('click', () => {
+    localStorage.clear();
+    text.innerText = 'Welcome to Randomiser.';
+  });
+</script>
+</body>
+</html>

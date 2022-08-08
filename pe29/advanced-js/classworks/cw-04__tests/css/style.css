@@ -1,0 +1,51 @@
+:root {
+  --radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.coffee-machine {
+  padding: 40px;
+  border-radius: var(--radius);
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 0 #1b67a8;
+  background-color: #696969;
+  margin: 50px auto;
+}
+
+.coffee-machine__input {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: var(--radius);
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.coffee-machine__input:focus {
+  box-shadow: 0 0 0 2px #3d3d3d;
+}
+
+.coffee-machine__error {
+  color: darkred;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.coffee-machine__btn {
+  border: none;
+  outline: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  padding: 20px 35px;
+  background-color: #3d3d3d;
+  color: #fff;
+  text-transform: uppercase;
+}

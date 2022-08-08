@@ -1,0 +1,175 @@
+.container {
+	max-width: 1240px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.item-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.item {
+	width: calc((100% / 4) - 15px);
+}
+
+.item:nth-child(3n) {
+	transform: scale(1.2);
+}
+
+.item-img {
+	width: 100%;
+}
+
+.block {
+	padding: 20px;
+	background-color: tomato;
+}
+
+.dummy-pic {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+}
+
+.dummy-pic:hover {
+	content: url("https://picsum.photos/450/300");
+}
+
+.item-link:hover .orange-block {
+
+}
+
+.block::before {
+	content: '';
+	display: block;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: palegreen;
+}
+
+.block-child {
+	padding: 25px;
+	background-color: orchid;
+	margin: 10px 0;
+}
+
+.block-child:first-child {
+	background-color: rebeccapurple;
+}
+
+.block-child:last-child {
+	padding: 50px;
+	background-color: rebeccapurple;
+}
+
+.block-child:first-of-type {
+	background-color: red;
+}
+
+.block-child:nth-child(2n-1) {
+	background-color: black;
+}
+
+.block-child:nth-of-type(2n+1) {
+	background-color: teal;
+}
+
+
+body::-webkit-scrollbar {
+	width: 15px;
+}
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+body::-webkit-scrollbar-thumb {
+	background-color: plum;
+	outline: 1px solid lightgreen;
+}
+
+.block-child:hover {
+	padding: 50px;
+}
+
+.nav-link {
+	font-size: 36px;
+}
+
+.nav-link:active {
+	color: skyblue;
+}
+
+.nav-link:visited {
+	color: teal;
+}
+
+.nav-item-dropdown {
+	display: flex;
+	align-items: center;
+}
+/*.nav-item-dropdown::after {*/
+/*	content: '';*/
+/*	display: block;*/
+/*	border: 10px solid transparent;*/
+/*	border-bottom-color: #FF9933;*/
+/*}*/
+.nav-item-dropdown::after {
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: teal;
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.random-btn {
+
+}
+
+.block1{
+	margin:0 auto;
+	text-align: center;
+	
+}
+
+.btn{
+	padding: 20px 30px 20px 30px;
+	background-color: #1ac66c;
+	border-radius: 2px;
+	
+}
+
+.btn:hover{
+	transform: scale(1.2);
+}
+
+.desk {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.desk-item {
+	width: calc(100% / 8);
+	height: 100px;
+}
+
+.desk-item:nth-child(-n+8):nth-child(even) {
+	background-color: tomato;
+}
+
+.desk-item:nth-child(16n-8):nth-child(odd) {
+	background-color: tomato;
+}
+
+
+
+
+
+
+
+
+
+
+
+

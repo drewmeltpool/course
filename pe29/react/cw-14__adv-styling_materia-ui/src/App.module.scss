@@ -1,0 +1,36 @@
+.container {
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.email-client {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-content: space-between;
+}
+
+.navigation {
+  grid-column: span 2;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-column-gap: 20px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #0c5460;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 20px;
+
+  &--active {
+    text-decoration: underline;
+    color: mediumaquamarine;
+  }
+}
+
+.myStylesAreBetter {
+  font-size: 48px;
+}

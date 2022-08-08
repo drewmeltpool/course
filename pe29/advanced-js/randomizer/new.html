@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Randomiser</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+  />
+  <style>
+    * {
+      font: 14px sans-serif;
+    }
+
+    .container {
+      box-sizing: border-box;
+      max-width: 1240px;
+      padding: 0 20px;
+      margin: 0 auto;
+    }
+
+    .randomizer {
+      padding: 40px;
+      margin: 100px 0;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      background-color: lightblue;
+      border-radius: 5px;
+      box-shadow: 0 0 15px 0 #c5c5c5;
+    }
+
+    .randomizer__title {
+      grid-column: 1 / span 2;
+      text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .randomizer__btn {
+      padding: 10px 20px;
+      font-size: 20px;
+      color: #fff;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .randomizer__btn--start {
+      background-color: darkgreen;
+    }
+
+    .randomizer__btn--reset {
+      background-color: darkred
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+</div>
+
+<script src="randomizer.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

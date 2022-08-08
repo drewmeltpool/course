@@ -1,0 +1,305 @@
+/* Common styles */
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 980px;
+}
+
+.btn {
+    display: block;
+    padding: 19px 27px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-base {
+    background-color: #F48E0B;
+}
+
+.btn-base:hover {
+    background-color: #cb760c;
+}
+
+.base-section-header_slogan{
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-top: 74px;
+    font-weight: 700;
+}
+.base-section-header_text{
+    font-size: 17px;
+    text-align: center;
+    padding-top: 28px;
+}
+.base-section-header_divider--orange{
+    width: 62px;
+    height: 7px;
+    background-color: #F48E0B;
+    margin: 46px auto 0;
+}
+/* Common styles */
+
+
+/* About section */
+.main-header {
+    height: 900px;
+    padding-top: 531px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../imgs/header-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.main-header_content {
+    max-width: 833px;
+}
+
+.main-header_title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+}
+
+.main-header_description {
+    margin-bottom: 0;
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.main-header_title, .main-header_slogan {
+    text-transform: uppercase;
+}
+
+.main-header_slogan {
+    margin-top: 22px;
+    border: 1px solid white;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 66px;
+}
+
+.main-header_slogan > div {
+    display: inline-block;
+}
+
+.main-header_slogan--we {
+    padding-left: 31px;
+    padding-right: 23px;
+    box-sizing: border-box;
+    color: #F48E0B;
+    border-right: 4px solid #F48E0B;
+
+}
+
+.main-header_slogan--design {
+    padding-left: 23px;
+    padding-right: 31px;
+    margin-left: -7px;
+}
+
+.main-header_slogan--we,
+.main-header_slogan--design {
+    padding-top: 38px;
+    padding-bottom: 38px;
+    box-sizing: border-box;
+}
+
+/* About section */
+
+/* Section awards */
+.section-awards_img{
+    background-image: url('../imgs/award.png');
+    margin: 55px auto 0;
+    width: 281px;
+    height: 241px;
+}
+/* Section awards */
+
+/* Section nav */
+.section-nav-menu {
+    margin-top: 33px;
+}
+.section-nav-menu_content {
+    padding-bottom: 22px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #F48E0B;
+}
+
+.section-nav-menu_title {
+    display: inline-block;
+    margin: 0;
+    font-family: Lato;
+    color: #F48E0B;
+    font-size: 28px;
+    line-height: 28px;
+}
+
+.section-nav-menu_nav {
+    float: right;
+    display: inline-block;
+    vertical-align: super;
+}
+
+.section-nav-menu_nav-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.section-nav-menu_nav-item {
+    margin-left: 49px;
+    display: inline-block;
+    font-family: Lato;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.section-nav-menu_nav-item--selected,
+.section-nav-menu_nav-item:hover {
+    color: #F1B128;
+    cursor: pointer;
+}
+/* Section nav */
+
+/* About Us*/
+.section-consulting_details{
+    min-height: 318px;
+    margin-top: 107px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.section-consulting_details--images,
+.section-consulting_details--description{
+    width: calc(50% - 15px);
+}
+
+.image-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.image-item{
+    width: calc(50% - 15px);
+    height: 148px;
+    padding-left: 15px;
+    padding-top: 95px;
+    box-sizing: border-box;
+    margin-bottom: 22px;
+}
+
+.image-title{
+    margin: 0;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    background-color: #333;
+    min-width: 120px;
+    font-size: 14px;
+    padding: 14px 17px;
+    color: #fff;
+}
+
+.image-consulting,
+.image-photography,
+.image-web__design,
+.image-advertising{
+    background-image: url(../imgs/consolting.png);
+    background-size: cover;
+}
+
+.image-web__design,
+.image-advertising {
+    margin-bottom: 0;
+}
+
+.content-info__header {
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content-info__description {
+    margin-top: 22px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #505050;
+}
+.content-info__description--main,
+.content-info__description--secondary {
+    width: 105%;
+    margin: 0;
+}
+
+.content-info__description--secondary {
+    margin-top: 30px;
+}
+
+.content-info__header--consulting {
+    color: #F1B128;
+}
+
+.content-info__actions {
+    margin-top: 38px;
+}
+/*
+Section people start
+ */
+.section-people__list {
+    margin: 51px -2px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-people__list-item-wrapper {
+    width: 16.66%;
+    height: 180px;
+    padding: 0 2px;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+}
+
+.section-people__list-item {
+    border: 1px solid;
+    height: 100%;
+    padding-top: 117px;
+    padding-right: 14px;
+    padding-left: 14px;
+    box-sizing: border-box;
+}
+.section-people__list-item--angel-williams {
+    background-size: 100% 100%;
+    background-image: url('../imgs/team-members/Angel-Williams.png');
+}
+.section-people__list-item-name {
+    font-family: Lato;
+    font-size: 14px;
+    line-height: 14px;
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.section-people__list-item-name--last {
+    color: #F1B128;
+}
+/*
+Section people end
+ */

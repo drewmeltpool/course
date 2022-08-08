@@ -1,0 +1,42 @@
+button {
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 3px 5px 5px 0 #7a7a7a;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+button:focus {
+  border-color: #dce6ff;
+}
+
+.remove-me {
+  padding: 20px 45px;
+  font-size: 24px;
+  border-radius: 5px;
+  color: #ccc;
+  background-color: #696969;
+}
+
+.make-me-bigger {
+  padding: 10px 25px;
+  font-size: 18px;
+  border-radius: 15px;
+  color: #eeeeee;
+  background-color: #969696;
+}
+
+.active {
+  padding: 20px 45px;
+  font-size: 18px;
+  border-radius: 15px;
+  color: #eeeeee;
+  background-color: #969696;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+}

@@ -1,0 +1,17 @@
+.sidebar {
+  &__item {
+    display: flex;
+  }
+
+  &__icon {
+    width: 25px;
+  }
+}
+
+.aqua path {
+  fill: aqua;
+}
+
+.gold path {
+  fill: gold;
+}

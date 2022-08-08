@@ -1,0 +1,70 @@
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+.my-form {
+	width: 450px;
+	padding: 20px;
+	background-color: #9d9d9d;
+	border-radius: 4px;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.my-form-field {
+	border: none;
+	outline: none;
+	padding: 15px 25px;
+	border-radius: 4px;
+}
+
+.my-form-field:focus {
+	box-shadow: 0 0 3px 1px #6f6f6f;
+}
+
+.my-form-field::placeholder {
+	font-style: italic;
+}
+
+.my-form-field:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.my-form-field-search {
+	position: relative;
+}
+
+.my-form-field-search input {
+	width: 100%;
+	padding-left: 35px;
+}
+
+.my-form-search-img {
+	height: 15px;
+	position: absolute;
+	top: calc((100% - 15px) / 2);
+	left: 10px;
+}
+
+.my-form-submit {
+	margin-top: 50px;
+}
+
+.custom-checkbox-input {
+	display: none;
+}
+
+.custom-checkbox-img {
+	width: 32px;
+	height: 32px;
+}
+
+.custom-checkbox-input:checked ~ .custom-checkbox-img path{
+	fill: #f0f;
+}
+
+
+.my-form-textarea {
+	resize: none;
+}

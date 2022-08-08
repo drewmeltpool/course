@@ -1,0 +1,10 @@
+.email {
+  cursor: pointer;
+  padding: 20px 40px;
+  border-radius: 10px;
+  background-color: #c2c2c2;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
